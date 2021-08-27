@@ -462,6 +462,7 @@ header .wrapper {
 .how_screen>.wrapper img {
     width: 790px;
     border-radius: 5px;
+    object-fit: scale-down;
 }
 
 .gray_block {
@@ -1403,9 +1404,16 @@ legend {
 }
 
 @media screen and (max-width: 639px) {
+    body {
+        overflow-x: hidden;
+    }
+    header {
+        width: 100vw;
+    }
     header .wrapper {
-        width: calc(100% - 20px);
+        width: calc(100vw - 20px);
         padding: 26px 10px;
+        margin: 0px;
     }
     #header_switch {
         padding-right: 25px;
@@ -1417,6 +1425,33 @@ legend {
         padding-top: 30%;
         font-size: 48px;
         line-height: 56px;
+    }
+    .how_screen .wrapper {
+        width: calc( 100% - 40px );
+    }
+    .how_screen .wrapper img {
+        width: 100%;
+
+    }
+    .pay_screen .wrapper {
+        padding: 100px 10px;
+    }
+    .testimonials_screen .screen_header {
+        font-size: 32px;
+    }
+    footer .gradient-btn {
+        width: 100%;
+        font-size: 12px;
+    }
+    .footer_contacts_us {
+        max-width: 90vw;
+    }
+    .footer_contacts_us fieldset, .footer_contacts_us fieldset textarea {
+        max-width: 90vw;
+        width: 90%;
+    }
+    .agreement_label {
+        font-size: 8px;
     }
 }
 
